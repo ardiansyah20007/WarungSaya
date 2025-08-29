@@ -1,0 +1,92 @@
+==================================
+       WARUNGSAYA - Tugas Akhir
+==================================
+
+Nama Aplikasi : WarungSaya
+Deskripsi     : Sistem toko online sederhana berbasis web untuk UMKM.
+Tujuan        : Membantu pelaku usaha kecil mengelola produk, transaksi, dan penjualan secara digital.
+Teknologi     : PHP, MySQL, HTML, CSS, Bootstrap 5
+Dibuat untuk  : Tugas Akhir Mahasiswa (Sistem Informasi / Informatika)
+
+----------------------------------
+       Struktur Folder
+----------------------------------
+WARUNGSAYA/
+│
+├── index.php               ← Halaman utama toko (pelanggan)
+├── keranjang.php           ← Lihat & edit keranjang belanja
+├── checkout.php            ← Form konfirmasi pesanan
+├── terima_kasih.php        ← Halaman setelah pesanan berhasil
+├── hapus_dari_keranjang.php ← Hapus item dari keranjang
+│
+├── admin/
+│   ├── login.php           ← Halaman login admin
+│   ├── dashboard.php       ← Dashboard admin
+│   └── logout.php          ← Logout admin
+│
+├── produk/
+│   ├── index.php           ← Daftar semua produk
+│   ├── tambah.php          ← Tambah produk baru
+│   ├── edit.php            ← Edit produk
+│   └── hapus.php           ← Hapus produk
+│
+├── includes/
+│   ├── db.php              ← Koneksi ke database
+│   ├── header.php          ← Header HTML
+│   ├── sidebar.php         ← Sidebar navigasi admin
+│   └── footer.php          ← Footer & script
+│
+├── assets/
+│   ├── css/style.css       ← Custom styling
+│   └── images/             ← Gambar produk (contoh: produk.jpg)
+│
+└── config/
+    └── database.sql        ← Script untuk membuat database & tabel
+
+----------------------------------
+       Cara Instalasi
+----------------------------------
+1. Pastikan XAMPP (Apache & MySQL) sudah terinstal.
+2. Letakkan folder WARUNGSAYA ke dalam:
+   C:\xampp\htdocs\
+
+3. Buka phpMyAdmin: http://localhost/phpmyadmin
+4. Buat database baru: warungsaya
+5. Impor file: config/database.sql
+
+6. Buka aplikasi di browser:
+   - Admin: http://localhost/warungsaya/admin/login.php
+     Username: admin
+     Password: admin123
+
+   - Toko Pelanggan: http://localhost/warungsaya/index.php
+
+----------------------------------
+       Fitur Utama
+----------------------------------
+✅ Admin Panel:
+   - Login aman (password di-hash)
+   - Dashboard ringkasan
+   - Manajemen produk (CRUD)
+
+✅ Toko Online:
+   - Tampilan produk untuk pelanggan
+   - Keranjang belanja (session-based)
+   - Checkout & simpan pesanan
+   - Update stok otomatis saat checkout
+
+✅ Laporan:
+   - Data produk, pesanan, dan pelanggan tersimpan di database
+
+----------------------------------
+       Catatan
+----------------------------------
+- Untuk tampilan gambar produk, taruh file bernama "produk.jpg" di assets/images/
+- Password admin di-hash dengan password_hash() PHP.
+- Aplikasi ini bisa dikembangkan lebih lanjut (multi-admin, laporan PDF, dll).
+
+==================================
+       Dibuat oleh: [Mohamad Ardiansyah Pratama]
+       Program Studi: [Contoh: Sistem Informasi]
+       Tahun: 2025
+==================================
